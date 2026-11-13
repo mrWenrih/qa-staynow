@@ -1,0 +1,296 @@
+{
+  "id": "b7c3e910-4f82-4a1d-9c31-6e2b7a14f001",
+  "version": "2.0",
+  "name": "StayNow",
+  "url": "https://automationintesting.online",
+  "tests": [
+    {
+      "id": "a1111111-1111-4111-8111-111111111101",
+      "name": "TC-16 Admin Login and Logout",
+      "commands": [
+        {
+          "id": "c1000001-0001-4001-8001-000000000001",
+          "comment": "Відкрити сторінку входу до адмінпанелі /admin",
+          "command": "open",
+          "target": "/admin",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000002",
+          "comment": "Задати фіксований розмір вікна",
+          "command": "setWindowSize",
+          "target": "1280x900",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000003",
+          "comment": "Дочекатися поля Username",
+          "command": "waitForElementVisible",
+          "target": "id=username",
+          "targets": [
+            ["id=username", "id"],
+            ["css=#username", "css:finder"],
+            ["xpath=//input[@id='username']", "xpath:attributes"]
+          ],
+          "value": "10000"
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000004",
+          "comment": "Ввести логін admin",
+          "command": "type",
+          "target": "id=username",
+          "targets": [
+            ["id=username", "id"],
+            ["css=#username", "css:finder"]
+          ],
+          "value": "admin"
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000005",
+          "comment": "Ввести пароль password",
+          "command": "type",
+          "target": "id=password",
+          "targets": [
+            ["id=password", "id"],
+            ["css=#password", "css:finder"]
+          ],
+          "value": "password"
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000006",
+          "comment": "Натиснути кнопку Login",
+          "command": "click",
+          "target": "id=doLogin",
+          "targets": [
+            ["id=doLogin", "id"],
+            ["css=#doLogin", "css:finder"],
+            ["xpath=//button[@id='doLogin']", "xpath:attributes"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000007",
+          "comment": "Дочекатися форми керування номерами (ознака успішного входу)",
+          "command": "waitForElementVisible",
+          "target": "id=roomName",
+          "targets": [
+            ["id=roomName", "id"],
+            ["css=#roomName", "css:finder"]
+          ],
+          "value": "10000"
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000008",
+          "comment": "Жорстка перевірка: кнопка Create доступна в адмінпанелі",
+          "command": "assertElementPresent",
+          "target": "id=createRoom",
+          "targets": [
+            ["id=createRoom", "id"],
+            ["css=#createRoom", "css:finder"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000009",
+          "comment": "М'яка перевірка: пункт Report присутній у шапці",
+          "command": "verifyElementPresent",
+          "target": "id=reportLink",
+          "targets": [
+            ["id=reportLink", "id"],
+            ["css=#reportLink", "css:finder"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000010",
+          "comment": "М'яка перевірка: активна вкладка Rooms",
+          "command": "verifyText",
+          "target": "css=a.nav-link.active",
+          "targets": [
+            ["css=a.nav-link.active", "css:finder"]
+          ],
+          "value": "Rooms"
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000011",
+          "comment": "Натиснути Logout у шапці адмінпанелі",
+          "command": "click",
+          "target": "xpath=//button[normalize-space()='Logout']",
+          "targets": [
+            ["xpath=//button[normalize-space()='Logout']", "xpath:innerText"],
+            ["css=button.btn-outline-danger", "css:finder"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000012",
+          "comment": "Дочекатися повернення на гостьову сторінку після Logout",
+          "command": "waitForElementVisible",
+          "target": "css=nav a[href='/admin']",
+          "targets": [
+            ["css=nav a[href='/admin']", "css:finder"]
+          ],
+          "value": "10000"
+        },
+        {
+          "id": "c1000001-0001-4001-8001-000000000013",
+          "comment": "Жорстка перевірка: після виходу відображається посилання Admin у меню",
+          "command": "assertElementPresent",
+          "target": "css=nav a[href='/admin']",
+          "targets": [
+            ["css=nav a[href='/admin']", "css:finder"]
+          ],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "a2222222-2222-4222-8222-222222222202",
+      "name": "TC-13 Send Contact Message",
+      "commands": [
+        {
+          "id": "c2000002-0002-4002-8002-000000000001",
+          "comment": "Відкрити головну сторінку",
+          "command": "open",
+          "target": "/",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000002",
+          "comment": "Задати фіксований розмір вікна",
+          "command": "setWindowSize",
+          "target": "1280x900",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000003",
+          "comment": "Дочекатися поля Name контактної форми",
+          "command": "waitForElementVisible",
+          "target": "id=name",
+          "targets": [
+            ["id=name", "id"],
+            ["css=[data-testid='ContactName']", "css:data-attr"],
+            ["css=#name", "css:finder"]
+          ],
+          "value": "10000"
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000004",
+          "comment": "Ввести ім'я гостя",
+          "command": "type",
+          "target": "id=name",
+          "targets": [
+            ["id=name", "id"],
+            ["css=[data-testid='ContactName']", "css:data-attr"]
+          ],
+          "value": "Maxym Lubchenko"
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000005",
+          "comment": "Ввести email гостя",
+          "command": "type",
+          "target": "id=email",
+          "targets": [
+            ["id=email", "id"],
+            ["css=[data-testid='ContactEmail']", "css:data-attr"]
+          ],
+          "value": "lalalaka@example.com"
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000006",
+          "comment": "Ввести телефон гостя",
+          "command": "type",
+          "target": "id=phone",
+          "targets": [
+            ["id=phone", "id"],
+            ["css=[data-testid='ContactPhone']", "css:data-attr"]
+          ],
+          "value": "09876543210"
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000007",
+          "comment": "Ввести тему звернення",
+          "command": "type",
+          "target": "id=subject",
+          "targets": [
+            ["id=subject", "id"],
+            ["css=[data-testid='ContactSubject']", "css:data-attr"]
+          ],
+          "value": "Reservation question"
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000008",
+          "comment": "Ввести текст повідомлення",
+          "command": "type",
+          "target": "id=description",
+          "targets": [
+            ["id=description", "id"],
+            ["css=[data-testid='ContactDescription']", "css:data-attr"]
+          ],
+          "value": "Hello, I would like to check early check-in possibility."
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000009",
+          "comment": "Натиснути кнопку Submit",
+          "command": "click",
+          "target": "xpath=//button[normalize-space()='Submit']",
+          "targets": [
+            ["xpath=//button[normalize-space()='Submit']", "xpath:innerText"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000010",
+          "comment": "Дочекатися заголовка подяки",
+          "command": "waitForElementVisible",
+          "target": "xpath=//h3[contains(.,'Thanks for getting in touch')]",
+          "targets": [
+            ["xpath=//h3[contains(.,'Thanks for getting in touch')]", "xpath:innerText"]
+          ],
+          "value": "10000"
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000011",
+          "comment": "Жорстка перевірка: заголовок подяки містить ім'я гостя",
+          "command": "assertText",
+          "target": "xpath=//h3[contains(.,'Thanks for getting in touch')]",
+          "targets": [
+            ["xpath=//h3[contains(.,'Thanks for getting in touch')]", "xpath:innerText"]
+          ],
+          "value": "Thanks for getting in touch Maxym Lubchenko!"
+        },
+        {
+          "id": "c2000002-0002-4002-8002-000000000012",
+          "comment": "М'яка перевірка: у блоці подяки відображається тема звернення",
+          "command": "verifyText",
+          "target": "xpath=//div[contains(@class,'card-body')][h3[contains(.,'Thanks for getting in touch')]]/p[2]",
+          "targets": [
+            ["xpath=//div[contains(@class,'card-body')][h3[contains(.,'Thanks for getting in touch')]]/p[2]", "xpath:position"]
+          ],
+          "value": "Reservation question"
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "s1111111-1111-4111-8111-111111111100",
+      "name": "StayNow Sprint 4 Suite",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 300,
+      "tests": [
+        "a1111111-1111-4111-8111-111111111101",
+        "a2222222-2222-4222-8222-222222222202"
+      ]
+    }
+  ],
+  "urls": [
+    "https://automationintesting.online/"
+  ],
+  "plugins": []
+}
