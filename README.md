@@ -38,3 +38,4 @@ mvn -q -B test
 - Оніщук Ілья, КТ, @mrWenrih
 - Однораз Олександр, ТА, @Ostrigoth
 - Свідзінський Антон, СМ, @tiktakson
+end
