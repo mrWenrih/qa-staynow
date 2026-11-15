@@ -36,6 +36,7 @@ mvn -q -B test
 
 Перші коміти:
 - Оніщук Ілья, КТ, @mrWenrih
+- Дубчак Богдан, ІТ, @neuror1ston
 - Однораз Олександр, ТА, @Ostrigoth
 - Свідзінський Антон, СМ, @tiktakson
 end
