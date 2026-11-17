@@ -18,7 +18,7 @@ class PriceCalculatorNightTest {
         calculator = new PriceCalculator();
     }
 
-    // Очікувано червоний на v1: дефект D4 (BL-50), Issue #___
+    // Очікувано червоний на v1: дефекти D3 (BL-30), Issue #12 і D4 (BL-50), Issue #7
     @ParameterizedTest
     @CsvSource({
             "333.33, 2026, 6, 5, 498.33",

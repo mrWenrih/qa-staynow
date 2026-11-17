@@ -59,7 +59,7 @@ class BookingValidatorTest {
         );
     }
 
-    // Очікувано червоний на v1: дефект D1 (BL-10), Issue #___
+    // Очікувано червоний на v1: дефект D1 (BL-10), Issue #5
     @ParameterizedTest
     @CsvSource({
             "2026, 6, 3, false",
@@ -86,7 +86,7 @@ class BookingValidatorTest {
         }
     }
 
-    // Очікувано червоний на v1: дефект D2 (BL-10), Issue #___
+    // Очікувано червоний на v1: дефект D2 (BL-10), Issue #6
     @ParameterizedTest
     @CsvSource({
             "2026, 5, 31, true",

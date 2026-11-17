@@ -18,7 +18,7 @@ class CancellationFeeTest {
         availability = new Availability();
     }
 
-    // Очікувано червоний на v1: дефект D5 (BL-60), Issue #___
+    // Очікувано червоний на v1: дефект D5 (BL-60), Issue #13
     @ParameterizedTest
     @CsvSource({
             "8, 0.00",

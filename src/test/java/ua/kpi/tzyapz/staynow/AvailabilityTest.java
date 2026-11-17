@@ -26,7 +26,7 @@ class AvailabilityTest {
         availability = new Availability();
     }
 
-    // Очікувано частково червоний на v1 (для 7 днів): дефект D5 (BL-60), Issue #___
+    // Очікувано частково червоний на v1 (для 7 днів): дефект D5 (BL-60), Issue #13
     @ParameterizedTest(name = "BL-60: total={0}, днів до заїзду={1} → повернення={2}")
     @CsvSource({
             "111.11, 4, 55.55",
@@ -45,7 +45,7 @@ class AvailabilityTest {
         assertEquals(expected, actual);
     }
 
-    // Очікувано червоний на v1: дефект D6 (BL-70), Issue #___
+    // Очікувано червоний на v1: дефект D6 (BL-70), Issue #15
     @ParameterizedTest(name = "BL-70: суміжний інтервал [{0}, {1}) має бути вільним")
     @CsvSource({
             "2026-07-05, 2026-07-10",
