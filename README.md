@@ -99,6 +99,4 @@ mvn -v   # Java version: 17.x
 - Issues проєкту: https://github.com/mrWenrih/qa-staynow/issues
 - Матриця покриття: [`docs/coverage-matrix.md`](docs/coverage-matrix.md)
 - Протокол Surefire: [`docs/surefire-summary.md`](docs/surefire-summary.md)
-- Досьє проєкту: `<URL>`
-- Таблиця задач: `<URL>`
-- Ретроспектива: `<URL>`
+- Таблиця задач: [google_table](https://docs.google.com/spreadsheets/d/10ezWuOd5-dbboyAZT2WKKzMGLRh42oHpzkAVpbE92hE/edit?gid=1214524422#gid=1214524422)
