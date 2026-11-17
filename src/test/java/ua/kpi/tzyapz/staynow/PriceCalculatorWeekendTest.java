@@ -17,7 +17,7 @@ class PriceCalculatorWeekendTest {
         calculator = new PriceCalculator();
     }
 
-    // Очікувано червоний на v1: дефект D3 (BL-30), Issue #___
+    // Очікувано червоний на v1: дефект D3 (BL-30), Issue #12
     @ParameterizedTest
     @CsvSource({
             "2026, 6, 4, false",
